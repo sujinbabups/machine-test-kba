@@ -31,7 +31,7 @@ const ViewTasks = () => {
   }, []);
 
   useEffect(() => {
-    // Filter tasks based on the selected status and sort by priority
+    
     let filtered =
       filterStatus === "all"
         ? tasks
@@ -69,7 +69,7 @@ const ViewTasks = () => {
   };
 
   const sortByPriority = (taskList) => {
-    // Custom priority order: high > medium > low
+
     const priorityOrder = { high: 1, medium: 2, low: 3 };
     return [...taskList].sort(
       (a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]

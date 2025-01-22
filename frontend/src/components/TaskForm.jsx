@@ -22,7 +22,7 @@ const TaskForm = () => {
         addTaskasync(TaskDetails);
     };
     const addTaskasync = async (TaskDetails) => {
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('/api/api/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,6 +31,7 @@ const TaskForm = () => {
         });
         const data = await response.json();
         alert('Task Added Successfully');
+
         navigate('/view-task')
         console.log(data);
     }
